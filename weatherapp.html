@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="weatherapp.css">
+</head>
+
+<script src="/Users/gadiyaramsaidurgaharshitha/bower_components/angular/angular.js"></script>
+<body ng-app="mymod" ng-controller="mycntrl">
+
+    <script src="weatherapp.js"></script>
+
+
+    <h1>Weather Updates</h1>
+
+ <div class='card'>  
+    <div class="search">
+    
+    <input type="text" placeholder ="Enter city name" ng-model="city">
+    <button ng-click="search()">search</button> <br>
+    </div>
+
+<h2>Current weather and forcasts in states...</h2>
+
+
+
+<div class="weather">
+   
+    <table>
+        <tr>
+            <td><h4>City Name</h4></td>
+            <td>{{details.name}}</td>
+        </tr>
+        <tr>
+            <td><h4>Weather Description</h4></td>
+            <td>{{details.weather[0].description}}</td>
+        </tr>
+        <tr>
+            <td><h4>Temperature in Celsius</h4></td>
+            <td>{{temp}}</td>
+        </tr>
+    </table>
+</div> 
+<br><br>
+</div> <br>
+ 
+</body>
+</html>
